@@ -6,14 +6,14 @@
 	<link rel="stylesheet" type="text/css" href="loginstyle.css">
 	
 
-  <!-- It will redirect to the Home Page after submitting the form -->
+  <!-- It will redirect to the Home Page after submitting the form
   <script>
   $(document).ready(function(){
     $("form").submit(function(){
       alert("Registration Successful !");
     });
   });
-  </script>
+  </script> -->
 </head>
 <body>
 		<div class="form-box">
@@ -51,15 +51,53 @@
 			</div>
 			
 			<!-- Registration Form -->
-			<form id="register" class="input-group">
-				<input type="text" class="input-field" placeholder="Full Name" required="required">
-				<input type="email" class="input-field" placeholder="Email Address" required="required">
-				<input type="password" class="input-field" placeholder="Create Password" name="psame" required="required">
-				<input type="password" class="input-field" placeholder="Confirm Password" name="psame" required="required">
+			<form id="register" action="/register" method="post" class="input-group">
+				<input type="text" class="input-field" name="fullName" placeholder="Full Name" required="required">
+				<input type="email" class="input-field" name="email" placeholder="Email Address" required="required">
+				<input type="password" class="input-field" placeholder="Create Password" name="pass" required="required">
+				<input type="password" class="input-field" placeholder="Confirm Password" name="passConf" required="required">
 				<input type="checkbox" class="check-box" id="chkAgree" onclick="goFurther()">I agree to the Terms & Conditions
 				<button type="submit" id="btnSubmit" class="submit-btn reg-btn">Register</button>
 			</form>
 		</div>
-		<script type="text/javascript" src="loginscript.js"></script>
-</body>
+		<!-- <script type="text/javascript" src="loginscript.js"></script> -->
+<script>
+	// For LOGIN
+var x = document.getElementById("login");
+var y = document.getElementById("register");
+var z = document.getElementById("btn");
+var a = document.getElementById("log");
+var b = document.getElementById("reg");
+var w = document.getElementById("other");
+
+function register() {
+  x.style.left = "-400px";
+  y.style.left = "50px";
+  z.style.left = "110px";
+  w.style.visibility = "hidden";
+  b.style.color = "#fff";
+  a.style.color = "#000";
+}
+
+function login() {
+  x.style.left = "50px";
+  y.style.left = "450px";
+  z.style.left = "0px";
+  w.style.visibility = "visible";
+  a.style.color = "#fff";
+  b.style.color = "#000";
+}
+  
+// CheckBox Function
+function goFurther(){
+  if (document.getElementById("chkAgree").checked == true) {
+    document.getElementById('btnSubmit').style = 'background: linear-gradient(to right, #3744fa, 6fd4e6);';
+  }
+  else{
+    document.getElementById('btnSubmit').style = 'background: lightgray;';
+  }
+}
+
+</script>
+	</body>
 </html>

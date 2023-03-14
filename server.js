@@ -24,15 +24,17 @@ app.get("/login", function(req,res){
 // Register a new user with email and password
 app.post('/register', async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const email = req.body.email;
+    const password = req.body.pass;
+    const passConf = req.body.passConf;
 
-    const userCredential = await firebase.auth().createUserWithEmailAndPassword(email, password);
+    const userCredential = await firebase.auth().createUserWithEmailAndPassword(email, passConf);
     const user = userCredential.user;
 
     res.json({ success: true, data: { uid: user.uid } });
     res.redirect("home");
   } catch (error) {
-    res.status(400).json({ success: false, error: error.message });
+    res.status(400).json({ success: false, error: error.message, code: error.code });
   }
 });
 
@@ -50,7 +52,7 @@ app.post('/login', async (req, res) => {
     res.json({ success: true, data: { uid: user.uid } });
     res.send("<h2>Success</h2>")
   } catch (error) {
-    res.status(400).json({ success: false, error: error.message });
+    res.status(400).json({ success: false, error: error.message, code: error.code });
   }
 });
 
