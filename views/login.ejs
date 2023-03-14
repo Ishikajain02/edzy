@@ -29,12 +29,12 @@
 			</div>
 			
 			<!-- Login Form -->
-			<form id="login" class="input-group" action="index.html">
+			<form id="login" class="input-group" action="/login" method="post">
 				<div class="inp">
-					<img src="images/user.png"><input type="text" id="email" class="input-field" placeholder="Username or Phone Number" style="width: 88%; border:none;" required="required">
+					<img src="images/user.png"><input type="text" id="email" class="input-field" placeholder="Email" name="email" style="width: 88%; border:none;" required="required">
 				</div>
 				<div class="inp">
-					<img src="images/password.png"><input type="password" id="password" class="input-field" placeholder="Password" style="width: 88%; border: none;" required="required">
+					<img src="images/password.png"><input type="password" id="password" name="password" class="input-field" placeholder="Password" style="width: 88%; border: none;" required="required">
 				</div>
 				<input type="checkbox" class="check-box">Remember Password
 				<button type="submit" class="submit-btn">Log In</button>
@@ -60,6 +60,6 @@
 				<button type="submit" id="btnSubmit" class="submit-btn reg-btn">Register</button>
 			</form>
 		</div>
-		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="loginscript.js"></script>
 </body>
 </html>
