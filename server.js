@@ -32,6 +32,9 @@ app.get("/subjects/computer_courses", function(req,res){
 app.get("/login", function(req,res){
     res.render("login");
 })
+app.get("/donate", function(req,res){
+  res.render("donate");
+})
 // Register a new user with email and password
 app.post('/register', async (req, res) => {
   try {
