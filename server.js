@@ -18,6 +18,17 @@ app.use(express.static('public'));
 app.get("/", function(req,res){
     res.render("home");
 });
+app.get("/subjects/jee", function(req,res){
+  res.render("subjects/jee");
+})
+
+app.get("/subjects/gate_preparation", function(req,res){
+  res.render("subjects/gate_preparation");
+})
+
+app.get("/subjects/computer_courses", function(req,res){
+  res.render("subjects/computer_courses");
+})
 app.get("/login", function(req,res){
     res.render("login");
 })

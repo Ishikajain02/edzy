@@ -3,31 +3,14 @@
 <head>
 	<link rel="shortcut icon" type="png" href="../images/books.png">
 	<title>Prepare for JEE Mains & Advanced</title>
-	<link rel="stylesheet" type="text/css" href="subjects.css">
+	<link rel="stylesheet" type="text/css" href="../subjects.css">
 	<script type="text/javascript" src="../script.js"></script>
 </head>
 <body>
 
 	<!-- NAVIGATION -->
-	<header id="header">
-		<nav>
-			<div class="logo"><img src=".../images/logo1.jpeg" alt="logo"></div>
-			<ul>
-				<li><a class="active" href="">Home</a></li>
-				<li><a href="#dictionary_section">Dictionary</a></li>
-				<li><a href="#team_section">Team</a></li>
-				<li><a href="#services_section">Services</a></li>
-				<li><a href="#contactus_section">Contact</a></li>
-				<li><a href="#quiz">Quiz</a></li>
-				<li><a href="blog">Blogs</a></li>
-				<li><a href="donation">Donation</a></li>
-			</ul>
-			<!--<div class="srch"><input type="text" class="search" placeholder="Search here..."><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQedb-7QflXGHEJ35yFEU6AGkpRHbD9GZFdXpHwCgmJ1ir2Fz0UhXH2c3f942yF0MGRZPE&usqp=CAU" alt="search" onclick=slide()></div>-->
-			<a class="get-started" href="/login">Get Started</a>
-			<img src="images/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
-		</nav>
-		
-	
+	<%- include('../partials/header'); %>
+
 	
 
 	<div class="title">
@@ -414,34 +397,8 @@
 	</div>
 
 <!-- FOOTER -->
-<footer>
-	<div class="footer-container">
-		<div class="left-col">
-			<img src="images/logo1.jpeg" style="width: 100px;">
-			<br><br>
-			<div class="logo"></div>
-			<div class="social-media">
-				<a href="#"><img src="images/fb.png"></a>
-				<a href="#"><img src="images\insta.png"></a>
-				<a href="#"><img src="images\tt.png"></a>
-				<a href="#"><img src="images\ytube.png"></a>
-				<a href="#"><img src="images\linkedin.png"></a>
-			</div><br><br>
-			<p class="rights-text">Copyright © 2021 Created By Team, All Rights Reserved.</p>
-			<br><p><img src="images/location.png"> Indraprastha  University<br>Delhi</p><br>
-			<p><img src="images/phone.png"> +91-1234-567-890<br><img src="images/mail.png">&nbsp; edzyco@gmail.com</p>
-		</div>
-		<div class="right-col">
-			<h1 style="color: #fff">Our Newsletter</h1>
-			<div class="border"></div><br>
-			<p>Enter Your Email to get our News and updates.</p>
-			<form class="newsletter-form">
-				<input class="txtb" type="email" placeholder="Enter Your Email">
-				<input class="btn" type="submit" value="Submit">
-			</form>
-		</div>
-	</div>
-</footer>
+<%- include('../partials/footer'); %>
+
 
 
 </body>

@@ -8,8 +8,7 @@
     <title>Edzy</title>
 </head>
 <body>
-    <!-- Navigation Bar -->
-	<header id="header">
+	<header id="header" style="height:90vh">
 		<nav>
 			<div class="logo"><img src="images/logo.jpeg" alt="logo"></div>
 			<ul>
@@ -57,6 +56,7 @@
 			</ul>
 		</div>
 	</header>
+
 	<!-- Some Popular Subjects -->
 	<div class="title">
 		<span>Popular Subjects on Edzy</span>
@@ -64,19 +64,18 @@
 	<br><br>
 	<div class="course">
 		<center><div class="cbox">
-		<div class="det"><a href="subjects/jee.html"><img src="images/courses/book.png">JEE Preparation</a></div>
-		<div class="det"><a href="subjects/gate.html"><img src="images/courses/d1.png">GATE Preparation</a></div>
+		<div class="det"><a href="subjects/jee"><img src="images/courses/book.png">JEE Preparation</a></div>
+		<div class="det"><a href="subjects/gate_preparation"><img src="images/courses/d1.png">GATE Preparation</a></div>
 		<div class="det"><a href="subjects/jee.html#sample_papers"><img src="images/courses/paper.png">Sample Papers</a></div>
 		<div class="det"><a href="subjects/quiz.html"><img src="images/courses/d1.png">Daily Quiz</a></div>
 		</div></center>
 		<div class="cbox">
-		<div class="det"><a href="/computer_courses"><img src="images/courses/computer.png">Computer Courses</a></div>
+		<div class="det"><a href="subjects/computer_courses"><img src="images/courses/computer.png">Computer Courses</a></div>
 		<div class="det"><a href="/computer_courses#data"><img src="images/courses/data.png">Data Structures</a></div>
 		<div class="det"><a href="/computer_courses#algo"><img src="images/courses/algo.png">Algorithm</a></div>
 		<div class="det det-last"><a href="/computer_courses#projects"><img src="images/courses/projects.png">Projects</a></div>
 		</div>
 	</div>
-	<!-- FOOTER -->
 	<!-- SERVICES -->
 	<div class="service-swipe">
 		<div class="diffSection" id="services_section">
@@ -100,35 +99,7 @@
 		<a href=""><div class="s-card"><img src="https://www.freeiconspng.com/thumbs/news-icon/news-icon-38.png"><p>News</p></div></a>
 	</div>
 	</div>
-	<footer>
-		<div class="footer-container">
-			<div class="left-col">
-				<img src="images/logo1.jpeg" style="width: 100px;">
-				<br><br>
-				<div class="logo"></div>
-				<div class="social-media">
-					<a href="#"><img src="images/fb.png"></a>
-					<a href="#"><img src="images\insta.png"></a>
-					<a href="#"><img src="images\tt.png"></a>
-					<a href="#"><img src="images\ytube.png"></a>
-					<a href="#"><img src="images\linkedin.png"></a>
-				</div><br><br>
-				<p class="rights-text">Copyright © 2021 Created By Team, All Rights Reserved.</p>
-				<br><p><img src="images/location.png"> Indraprastha  University<br>Delhi</p><br>
-				<p><img src="images/phone.png"> +91-1234-567-890<br><img src="images/mail.png">&nbsp; edzyco@gmail.com</p>
-			</div>
-			<div class="right-col">
-				<h1 style="color: #fff">Our Newsletter</h1>
-				<div class="border"></div><br>
-				<p>Enter Your Email to get our News and updates.</p>
-				<form class="newsletter-form">
-					<input class="txtb" type="email" placeholder="Enter Your Email">
-					<input class="btn" type="submit" value="Submit">
-				</form>
-			</div>
-		</div>
-	</footer>
-	
+	<%- include('partials/footer'); %>
 
 </body>
 </html>
