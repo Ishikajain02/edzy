@@ -35,6 +35,9 @@ app.get("/login", function(req,res){
 app.get("/donate", function(req,res){
   res.render("donate");
 })
+app.get("/news", function(req,res){
+  res.render("news");
+})
 app.get("/team" , function(req,res){
    res.render("team");
 })
