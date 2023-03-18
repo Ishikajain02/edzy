@@ -35,6 +35,9 @@ app.get("/login", function(req,res){
 app.get("/donate", function(req,res){
   res.render("donate");
 })
+app.get("/team" , function(req,res){
+   res.render("team");
+})
 // Register a new user with email and password
 app.post('/register', async (req, res) => {
   try {
