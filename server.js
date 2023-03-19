@@ -41,6 +41,9 @@ app.get("/news", function(req,res){
 app.get("/team" , function(req,res){
    res.render("team");
 })
+app.get("/news", function(req,res){
+  res.render("news");
+})
 // Register a new user with email and password
 app.post('/register', async (req, res) => {
   try {
