@@ -5,13 +5,16 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  
 }
+
 body{
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url("https://thumbs.dreamstime.com/b/education-concept-bookshelf-books-textbooks-form-heart-i-love-reading-d-65881185.jpg");
+  /* background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url("https://thumbs.dreamstime.com/b/education-concept-bookshelf-books-textbooks-form-heart-i-love-reading-d-65881185.jpg"); */
+  background-image: radial-gradient(circle, #66d7eb, #00b7e6, #0096e1, #0071d3, #0049ba, #1c36a1, #242389, #250e71, #2c165e, #2e1c4c, #2c213a, #272529);
 }
 ::selection{
   color: #fff;
