@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="png" href="images/books.png">
+	<title>Feedback Form</title>
+	
+
+  <!-- It will redirect to the Home Page after submitting the form
+  <script>
+  $(document).ready(function(){
+    $("form").submit(function(){
+      alert("Registration Successful !");
+    });
+  });
+  </script> -->
+</head>
+<style>
+    * {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.message{
+    font-size: 90%;
+}
+
+body {
+	background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url("https://images.all-free-download.com/images/graphicwebp/3d_colorful_geometric_background_6829657.webp");
+	background-size: cover;
+	background-attachment: fixed;
+	display: flex;
+	justify-content: center;
+}
+.logo {
+	display: flex;
+	justify-content: center;
+}
+.logo img {
+	width: 100px;
+}
+.container
+{
+	width: 380px;
+	height: 500px;
+	position: relative;
+	margin: 6% auto;
+	background: #fff8;
+	padding: 5px;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0px 0px 100px rgba(0,0,0,0.4);
+}
+
+.button-box
+{
+	width: 220px;
+	margin: 35px auto;
+	position: relative;
+	box-shadow: 0 0 20px 9px rgba(0,0,0,.1);
+	border-radius: 30px;
+}
+
+.toggle-btn
+{
+	padding: 10px 30px;
+	cursor: pointer;
+	background: transparent;
+	position: relative;
+	border: 0;
+	outline: none;
+}
+
+#btn
+{
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 110px;
+	height: 100%;
+	background: linear-gradient(to right, #374afa, #56e7db);
+	border-radius: 30px;
+	transition: 0.5s;
+}
+.social-icons
+{
+	margin: 30px auto;
+	text-align: center;
+}
+.social-icons img
+{
+	width: 30px;
+	margin: 0 7px;
+	cursor: pointer;
+	opacity: 0.85;
+}
+
+.input-group
+{
+	top: 180px;
+	position: absolute;
+	width: 280px;
+	transition: .5s;
+	font-size: 13px;
+	color: #010101;
+}
+.inp {
+	border-bottom: 1px solid rgba(0,0,0,0.4);
+	justify-content: center;
+}
+.inp img{
+	width: 20px;
+	padding-right: 10px;
+}
+.input-field
+{
+	width: 100%;
+	padding: 10px 0;
+	margin: 5px 0;
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
+	border-bottom: 1px solid rgba(0,0,0,0.4);
+	outline: none;
+	background: transparent;
+	color: rgba(0,0,0);
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: rgba(0,0,0,0.7);
+	/*opacity: 1;  Firefox */
+}
+#register .input-field {
+	color: rgba(0,0,0,0.8);
+}
+.submit-btn
+{
+	width: 85%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background: linear-gradient(to right, #3744fa, #6fd4e6);
+	color: #fff;
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+}
+
+.reg-btn {
+	background: rgb(29, 12, 90);
+}
+.check-box
+{
+	cursor: pointer;
+	margin: 30px 10px 30px 0;
+}
+
+.instead {
+	margin-top: 10px;
+}
+.instead h3 {
+    overflow: hidden;
+    text-align: center;
+    color: rgba(0,0,0,0.6);
+}
+.instead h3:before,
+.instead h3:after {
+    background-color: rgba(0,0,0,0.5);
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+.instead h3:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+.instead h3:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+span
+{
+	color: rgba(0,0,0,0.8);
+	font-size: 12px;
+}
+
+#login
+{
+	left: 50px;
+}
+#register
+{
+	left: 450px;
+}
+
+.other {
+	display: grid;
+	justify-content: center;
+	margin-top: 250px;
+}
+
+.connect {
+	display: flex;
+	margin: 10px;
+	padding: 0px 30px;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	border: 1px solid lightgray;
+	cursor: pointer;
+	outline: none;
+	/*border-radius: 10px;*/
+	background: #fff3;
+}
+.connect:hover {
+	background: #fff8;
+}
+.connect img {
+	padding: 5px;
+	width: 25px;
+}
+.connect span {
+	padding: 10px;
+	font-size: 15px;
+}
+.hehe{
+    border-radius: 0.5%;
+}
+
+
+</style>
+<body>
+    <%- include('partials/header', { donateClass: 'active', homeClass: '', dictClass:'', teamClass:'', serviceClass:'', contactClass:'', quizClass:'', blogClass:''}); %>
+		<!--<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" id="log" onclick="login()" style="color: #fff;">Log In</button>
+				<button type="button" class="toggle-btn" id="reg" onclick="register()">Register</button>
+			</div>
+			<div class="social-icons">
+				<img src="images/fb2.png">
+				<img src="images/insta2.png">
+				<img src="images/tt2.png">
+			</div>
+			
+			 Login Form 
+			<form id="login" class="input-group" action="/login" method="post">
+				<div class="inp">
+					<img src="images/user.png"><input type="text" id="email" class="input-field" placeholder="Email" name="email" style="width: 88%; border:none;" required="required">
+				</div>
+				<div class="inp">
+					<img src="images/password.png"><input type="password" id="password" name="password" class="input-field" placeholder="Password" style="width: 88%; border: none;" required="required">
+				</div>
+				<input type="checkbox" class="check-box">Remember Password
+				<button type="submit" class="submit-btn">Log In</button>
+			</form>
+
+
+			<div class="other" id="other">
+				<div class="instead">
+					<h3>or</h3>
+				</div>
+				<button class="connect" onclick="google()">
+					<img src="images/courses/google.png"><span>Sign in with Google</span>
+				</button>
+			</div>
+        -->
+        <div class="container">
+            <form>
+              <fieldset>
+                <h1 class="mainheading">Feedback Form</h1>
+                <br>
+                <h4>It's compulsory to fill up all the fields below.</h4>
+              </fieldset>
+              <br>
+      
+              <p>
+                Your Name:
+                <input
+                  type="text"
+                  name="name"
+                  id=""
+                  placeholder="Enter Your Name"
+                  required
+                />
+              </p>
+              <br>
+      
+              <p>
+                Your Email: <input type="email" name="email" id="email" placeholder="xyz@gmail.com" required />
+              </p>
+              <br>
+      
+              <p>
+                Message:
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Enter your feedback for us." style="font-size: 20px;"
+                  cols="60"
+                  rows="7"
+                ></textarea>
+              </p>
+              <br>
+      
+              <p>
+                Rating:
+                <br>
+                <select class="hehe">
+                  <option value="">Select the options</option>
+                  <option value="job_inquiry">1 STAR</option>
+                  <option value="complaint">2 STAR</option>
+                  <option value="complaint">3 STAR</option>
+                  <option value="complaint">4 STAR</option>
+                  <option value="complaint">5 STAR</option>
+                </select>
+              </p>
+              <br>
+      
+              <input type="submit" value="Send" />
+            </form>
+          </div>
+          <%- include('partials/footer'); %>
+          </body>
+          </html>
+          
