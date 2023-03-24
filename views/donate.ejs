@@ -1,7 +1,218 @@
-<%- include('partials/header', { donateClass: 'active', homeClass: '', dictClass:'', teamClass:'', serviceClass:'', contactClass:'', quizClass:'', blogClass:''}); %>
-<form>
+
+<!--<form>
     <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_LQdhKvtGH2b9C6" async>
  </script> 
  </form>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Donation</title>
 
-<%- include('partials/footer'); %>
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="donate.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+<%- include('partials/header', { donateClass: 'active', homeClass: '', dictClass:'', teamClass:'', serviceClass:'', contactClass:'', quizClass:'', blogClass:''}); %>
+
+
+
+
+<!-- home section starts  -->
+
+<section class="home">
+
+   <div class="swiper home-slider">
+      
+      <div class="swiper-wrapper">
+
+         <section class="swiper-slide slide" style="background: url(https://www.czechuniversities.com/uploads/2020/12/graduation-hat-with-blue-tassel-top-glass-jar-filled-with-coins-modern-city-background.jpg) no-repeat;">
+            <div class="content">
+               <h3>IT'S <span>#NEVERTOOLATE</span> TO MAKE A DIFFERENCE</h3>
+
+               <a href="#" class="btn">DONATE</a>
+            </div>
+         </section>
+
+      </div>
+
+   </div>
+
+</section>
+
+<section>
+   <div class="container box">
+      <!-- <img ; width: 100; height: 130;" src="images/about-icon-1.png" alt=""> -->
+
+      <button style="float:right; margin-top: 13%;margin-right: 0; font-size: 30px;"  type="button" data-aos="fade-left" class="btn btn-outline-primary"><p>80+</p> <p style="font-size: 20px">MEMBERS TILL NOW</p> </button>
+
+
+      <div class="content">
+         <h3> <span style="color: black;font-size:40px ;">TAKE ACTION : </span> <span>   JOIN THE</span></h3>
+         <p><SPAN style="color:black;"><b>#CARE</b></SPAN> <span style="color:rgb(37, 37, 234);"><b>COLLECTIVE</b></span></p>
+   
+      </div>
+      <p style="font-size: 20px; padding-right: 26%;">
+         It is estimated that there are 35 million children in India who are in need of care and protection.<br><br>
+
+         It is a large number. But, at Make A Difference, we believe that the way to solve this problem is to build a community around these children. A community of those who care and want to contribute in whichever way then can to help build long-term solutions to this problem.<br><br>
+         
+         Imagine what a collective of 1 million doers and believers will be able to do. We can. And we can't wait to get started!</p>
+      
+
+   </div>
+</section>
+
+
+<!-- home section ends -->
+
+<!-- subjects section starts  -->
+
+<section class="subjects">
+
+   <div class="box-container">
+
+      <div class="box " data-aos="zoom-in">
+         <img src="https://live.staticflickr.com/3200/3080423428_9f7687ebdd_o.png" alt="">
+         <!-- <img src="images/subject-icon-1.png" alt=""> -->
+         <a href="money.html"><h3><B>DONATE MONEY</B></h3></a>
+         
+      </div>
+
+      <div class="box" data-aos="fade-up">
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXU0UmSYMVExMrrYGEfYHjuVWigXRT8jh65g&usqp=CAU" alt="">
+         <a href="book.html">
+            <h3  > DONATE BOOKS </h3>
+         </a>
+         
+      </div>
+
+      <div class="box" data-aos="fade-left">
+         <img src="https://media.istockphoto.com/id/931069122/vector/icon-with-the-concept-of-family-care-care-about-humanity.jpg?s=612x612&w=0&k=20&c=RWgHjgTaVOwdSQtPQcqQcTZ8t0MHdie7Jr0bnHZKvZc=" alt="">
+         <a href="volunteer.html"><h3>VOLUNTEER</h3></a>
+      </div>
+
+   </div>
+
+</section>
+<!-- home courses slider section starts  -->
+
+<section class="home-courses">
+
+    <div class="swiper home-courses-slider">
+ 
+       <div class="swiper-wrapper">
+ 
+          <!-- <div class="swiper-slide slide">
+             <div class="image">
+                <img src="images/course-1-1.png" alt="">
+                <h3>web development</h3>
+             </div>
+             <div class="content">
+                <h3>web development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, ratione?</p>
+                <a href="#" class="btn">read more</a>
+             </div>
+          </div> -->
+          <div class="swiper-slide slide" data-aos="flip-left">
+             <div class="image">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/002/779/613/small/woman-sitting-table-with-laptop-working-on-a-computer-freelance-online-education-or-social-media-concept-freelance-or-studying-concept-flat-style-illustration-isolated-on-white-vector.jpg" alt="">
+                <h3>WHO ARE CHILDREN AT RISK:</h3>
+             </div>
+             <div class="content">
+                <h3>WHO ARE CHILDREN AT RISK:</h3>
+                <p>LEARN MORE ABOUT THESE LOST VOICES
+                   Go beyond just statistics and numbers to really understand what it means to be a child in urgent need of care and protection. Learn more about their journey from childhood to their adult outcomes.</p>
+                <a href="#" class="btn">read more</a>
+             </div>
+          </div>
+ 
+          <div class="swiper-slide slide" data-aos="flip-up">
+             <div class="image">
+                <img src="https://media.istockphoto.com/id/900111322/vector/donation-flat-design.jpg?s=612x612&w=0&k=20&c=CuEtS3ui123cAbomb2JK6-23ZYnCnCeLa3sKH5hmRrc=" alt="">
+                <h3>INDIVIDUAL GIVING
+                   YOUR MONEY, YOUR IMPACT
+                </h3>
+             </div>
+             <div class="content">
+                <h3>INDIVIDUAL GIVING</h3>
+                <p>
+                   Contribute monthly or one time to finance critical services for children in urgent need of care and protection. MAD follows all financial regulations set forth for non-profits by the Government of India, and is audited annually.</p>
+                <a href="#" class="btn">DONATE</a>
+             </div>
+          </div>
+ 
+          <div class="swiper-slide slide" data-aos="flip-right">
+             <div class="image">
+                <img src="https://media.istockphoto.com/id/1220289026/vector/student-loan-color-icon-credit-to-pay-for-university-education-tuition-fee-college.jpg?s=612x612&w=0&k=20&c=_I1H21CXWRNvBnNzqnlkCB5LiC2vX_eaa70gAtIdDZI=" alt="">
+                <h3>GIVE SCHOLARSHIP</h3>
+             </div>
+             <div class="content">
+                <h3>GIVE SCHOLARSHIP</h3>
+                <p> Sponsor any child's education . Give them a education they deserve.</p>
+                <a href="#" class="btn">Give scholarship</a>
+             </div>
+          </div>
+ 
+          
+ 
+       </div>
+ 
+    </div>
+ 
+ </section>
+ 
+ <!-- home courses slider section ends -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <!-- footer section starts  -->
+ <%- include('partials/footer'); %>
+
+ 
+ <!-- footer section ends -->
+ 
+ <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script>
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+ 
+ 
+ 
+ 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+ <!-- swiper js link  -->
+ <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+ 
+ <!-- custom js file link  -->
+ <script src="js/script.js"></script>
+ 
+ </body>
+ </html>
+
