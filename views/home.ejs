@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
     <title>Edzy</title>
 </head>
 <body>
@@ -17,7 +20,7 @@
 				<li><a href="/dictionary">Dictionary</a></li>
 				<li><a href="/team">Team</a></li>
 				<li><a href="#services_section">Services</a></li>
-				<li><a href="#contactus_section">Contact</a></li>
+				<li><a href="/about">About</a></li>
 				<li><a href="#quiz">Quiz</a></li>
 				<li><a href="blog">Blogs</a></li>
 				<li><a href="/donate">Donation</a></li>
@@ -49,7 +52,7 @@
 				<li><a href="/dictionary">Dictionary</a></li>
 				<li><a href="#team_section">Team</a></li>
 				<li><a href="#services_section">Services</a></li>
-				<li><a href="#contactus_section">Contact</a></li>
+				<li><a href="/about">About</a></li>
 				<li><a href="#feedBACK">Feedback</a></li>
 				<li><a href="#quiz">Quiz</a></li>
 				<li><a href="blog">Blogs</a></li>
@@ -101,6 +104,48 @@
 	</div>
 	</div>
 	<%- include('partials/footer'); %>
-<script src="script.js"></script>
+<script>
+	Changing the style of scroll bar
+window.onscroll = function() {myFunction()};
+		
+function myFunction() {
+	var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+	var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+	var scrolled = (winScroll / height) * 100;
+	document.getElementById("myBar").style.width = scrolled + "%"; 
+}
+
+function scrollAppear() {
+  var introText = document.querySelector('.side-text');
+  var sideImage = document.querySelector('.sideImage');
+  var introPosition = introText.getBoundingClientRect().top;
+  var imagePosition = sideImage.getBoundingClientRect().top;
+  
+  var screenPosition = window.innerHeight / 1.2;
+
+  if(introPosition < screenPosition) {
+    introText.classList.add('side-text-appear');
+  }
+  if(imagePosition < screenPosition) {
+    sideImage.classList.add('sideImage-appear');
+  }
+}
+
+window.addEventListener('scroll', scrollAppear);
+
+// For switching between navigation menus in mobile mode
+var i = 2;
+function switchTAB() {
+	var x = document.getElementById("list-switch");
+	if(i%2 == 0) {
+		document.getElementById("list-switch").style= "display: grid; height: 50vh; margin-left: 5%;";
+		document.getElementById("search-switch").style= "display: block; margin-left: 5%;";
+	}else {
+		document.getElementById("list-switch").style= "display: none;";
+		document.getElementById("search-switch").style= "display: none;";
+	}
+	i++;
+}
+</script>
 </body>
 </html>

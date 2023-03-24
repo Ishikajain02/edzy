@@ -47,6 +47,9 @@ app.get("/news", function(req,res){
 app.get("/dictionary",function(req,res){
   res.render("dictionary");
 })
+app.get("/about", function(req,res){
+  res.render("about_us");
+})
 app.post("/mailsub", function(req,res){
   const mailchimp = require("@mailchimp/mailchimp_marketing");
 

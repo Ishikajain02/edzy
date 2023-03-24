@@ -1,5 +1,8 @@
 <header id="header">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
     <nav>
         <div class="logo"><a href="/"><img src="../images/logo.jpeg" alt="logo"></a></div>
         <ul>
@@ -7,7 +10,7 @@
             <li><a href="/dictionary" class="<%= dictClass %>">Dictionary</a></li>
             <li><a href="/team" class="<%= teamClass %>">Team</a></li>
             <li><a href="/#services_section" class="<%= serviceClass %>">Services</a></li>
-            <li><a href="#contactus_section" class="<%= contactClass %>">Contact</a></li>
+            <li><a href="/about" class="<%= contactClass %>">About</a></li>
             <li><a href="#quiz" class="<%= quizClass %>">Quiz</a></li>
             <li><a href="/blog" class="<%= blogClass %>">Blogs</a></li>
             <li><a href="/donate" class="<%= donateClass %>">Donation</a></li>
@@ -28,11 +31,53 @@
             <li><a href="#/dictionary" class="<%= dictClass %>">Dictionary</a></li>
             <li><a href="/team" class="<%= teamClass %>">Team</a></li>
             <li><a href="#services_section" class="<%= serviceClass %>">Services</a></li>
-            <li><a href="#contactus_section" class="<%= contactClass %>">Contact</a></li>
+            <li><a href="/about" class="<%= contactClass %>">About</a></li>
             <li><a href="#quiz" class="<%= quizClass %>">Quiz</a></li>
             <li><a href="/blog" class="<%= blogClass %>">Blogs</a></li>
             <li><a href="/donate" class="<%= donateClass %>">Donation</a></li>
         </ul>
     </div>
-    <script src="../script.js"></script>
+    <script>
+        // Changing the style of scroll bar
+// window.onscroll = function() {myFunction()};
+		
+// function myFunction() {
+// 	var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+// 	var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+// 	var scrolled = (winScroll / height) * 100;
+// 	document.getElementById("myBar").style.width = scrolled + "%"; 
+// }
+
+function scrollAppear() {
+  var introText = document.querySelector('.side-text');
+  var sideImage = document.querySelector('.sideImage');
+  var introPosition = introText.getBoundingClientRect().top;
+  var imagePosition = sideImage.getBoundingClientRect().top;
+  
+  var screenPosition = window.innerHeight / 1.2;
+
+  if(introPosition < screenPosition) {
+    introText.classList.add('side-text-appear');
+  }
+  if(imagePosition < screenPosition) {
+    sideImage.classList.add('sideImage-appear');
+  }
+}
+
+window.addEventListener('scroll', scrollAppear);
+
+// For switching between navigation menus in mobile mode
+var i = 2;
+function switchTAB() {
+	var x = document.getElementById("list-switch");
+	if(i%2 == 0) {
+		document.getElementById("list-switch").style= "display: grid; height: 50vh; margin-left: 5%;";
+		document.getElementById("search-switch").style= "display: block; margin-left: 5%;";
+	}else {
+		document.getElementById("list-switch").style= "display: none;";
+		document.getElementById("search-switch").style= "display: none;";
+	}
+	i++;
+}
+    </script>
 </header>
