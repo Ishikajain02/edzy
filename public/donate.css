@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap");
 * {
-  font-family: 'Nunito', sans-serif;
+  font-family:  sans-serif;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -42,65 +42,18 @@ section {
   padding: 5rem 10%;
 }
 
-.heading-link {
-  text-align: center;
-  background: url(https://cdn.vectorstock.com/i/preview-1x/96/91/set-line-audio-book-book-donation-and-online-quiz-vector-44229691.jpg) no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-/* .heading-link h3 {
-  font-size: 4rem;
-  text-transform: capitalize;
-  color: #444;
-} */
-/* section .container{
-  width: 500px;
-  height: 300px;
-  margin: 200px auto;
-}
-
-.glass{
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 20px;
-  border:1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-} */
-
-.heading-link p {
-  font-size: 2rem;
-  line-height: 2;
-  color: #0a0a0a;
-}
-
-.heading-link p a {
-  color: #0b0c5c;
-}
-
-.heading-link p a:hover {
-  text-decoration: underline;
-}
-
-.heading {
-  text-align: center;
-  margin-bottom: 3rem;
-  font-size: 3.5rem;
-  text-transform: capitalize;
-  color: #444;
-}
 
 .btn {
   display: inline-block;
   margin-top: 1rem;
-  padding: 1rem 3rem;
+  padding: /*1rem 3rem*/1rem 3rem ;
   font-size: 1.8rem;
   border: 0.1rem solid #3a9dbb;
   background: #f0fdfa;
   color: #37c9c9;
   cursor: pointer;
   text-transform: capitalize;
+  
 }
 
 .btn:hover {
