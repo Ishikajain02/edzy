@@ -53,10 +53,13 @@
 
             <div class="col">
 
-                <h3 class="title">payment</h3>
+                <h3 class="title">Remarks</h3>
 
                 <div class="inputBox">
-                    <span>cards accepted :</span>
+                  <div class="inputBox">
+                    <textarea name="" id="" cols="30" rows="8" placeholder="Remarks"></textarea>
+                  </div>
+                    <!-- <span>cards accepted :</span>
                     <img src="images/cards/card_img.png" alt="">
                 </div>
                 <div class="inputBox">
@@ -80,21 +83,13 @@
                     <div class="inputBox">
                         <span>CVV :</span>
                         <input type="text" placeholder="1234">
-                    </div>
+                    </div> -->
                 </div>
-
+              </div>
+              <div class = "gateway">
+                <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_LQdhKvtGH2b9C6" async> </script>
+               </div>
             </div>
-    
-        </div>
-        <div class = "gateway">
-        <form id = "payment">
-        
-        <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_LQdhKvtGH2b9C6" async>
-         </script>
-         
-         </form>
-         </div>
-        
     </form>
     </div>
     
@@ -124,7 +119,7 @@
 
 .container form{
   padding:20px;
-  width:700px;
+  width:20rem;
   background: #fff;
   box-shadow: 0 5px 10px rgba(0,0,0,.1);
   border: 0.1rem solid #1a1c7a;
@@ -192,11 +187,17 @@
   margin-top: 5px;
   cursor: pointer;
 }
-
+textarea{
+  width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-transform: none;
+}
 .container form .submit-btn:hover{
   background: #509fd3;
 }
 .container form .gateway{
-    margin-left: 250px;
+    margin-left: 50px;
 }
 </style>

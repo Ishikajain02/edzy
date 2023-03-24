@@ -35,6 +35,9 @@ app.get("/login", function(req,res){
 app.get("/donate", function(req,res){
   res.render("donate");
 })
+app.get("/donation/money", function(req,res){
+  res.render("donation/money");
+})
 app.get("/news", function(req,res){
   res.render("news");
 })
@@ -155,7 +158,7 @@ app.get('/google', async (req, res) => {
 });
 
 // Start the server
-
-app.listen(process.env.PORT || 3000, function() {
-    console.log("Server started on port 3000");
+const PORT = process.env.PORT || 8080
+app.listen(PORT, function() {
+    console.log("Server started on port "+PORT);
   });

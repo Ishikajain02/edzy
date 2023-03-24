@@ -7,6 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "engines": {
+    "node": "18.15.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ishikajain02/edzy.git"
@@ -24,6 +27,7 @@
     "express": "^4.18.2",
     "firebase": "^8.10.0",
     "lodash": "^4.17.21",
+    "node": "^18.15.0",
     "nodemon": "^2.0.21"
   }
 }
