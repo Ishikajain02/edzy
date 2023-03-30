@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="shortcut icon" type="png" href="../images/icon/favicon.png">
+	<link rel="shortcut icon" type="png" href="images/icon/favicon.png">
 	<title>Quiz</title>
 	<!--<link rel="stylesheet" type="text/css" href="quiz.css">
 	<script type="text/javascript" src="../script.js"></script>-->
@@ -9,7 +9,7 @@
 <body>
 	
 <!-- NAVIGATION -->
-<%- include('partials/header', { donateClass: 'active', homeClass: '', dictClass:'', teamClass:'', serviceClass:'', contactClass:'', quizClass:'', blogClass:''}); %>
+<%- include('partials/header', { donateClass: '', homeClass: '', dictClass:'', teamClass:'', serviceClass:'', contactClass:'', quizClass:'active', blogClass:''}); %>
 
 
 	
@@ -71,6 +71,7 @@
 	</div>
 
 </div>
+<%- include('partials/footer'); %>
     <script>
 		function quizt(frame) {
   document.getElementById('f1').style='display: none;';

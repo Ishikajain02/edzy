@@ -1,65 +1,71 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-const firebase = require('firebase');
-const firebaseConfig = require('./firebaseConfig.json');
-var _ = require('lodash');
+const firebase = require("firebase");
+const firebaseConfig = require("./firebaseConfig.json");
+var _ = require("lodash");
 const app = express();
 // Initialize Firebase app
 firebase.initializeApp(firebaseConfig);
 
-app.set('view engine', 'ejs');
-app.use(bodyParser.urlencoded({extended: true}));
+app.set("view engine", "ejs");
+app.use(bodyParser.urlencoded({ extended: true }));
 // Middleware to parse JSON data
 app.use(express.json());
 
 // Middleware to serve static files
-app.use(express.static('public'));
-app.get("/", function(req,res){
-    res.render("home");
+app.use(express.static("public"));
+app.get("/", function (req, res) {
+  res.render("home");
 });
-app.get("/subjects/jee", function(req,res){
+app.get("/subjects/jee", function (req, res) {
   res.render("subjects/jee");
-})
+});
 
-app.get("/subjects/gate_preparation", function(req,res){
+app.get("/subjects/gate_preparation", function (req, res) {
   res.render("subjects/gate_preparation");
-})
+});
 
-app.get("/subjects/computer_courses", function(req,res){
+app.get("/subjects/computer_courses", function (req, res) {
   res.render("subjects/computer_courses");
-})
-app.get("/login", function(req,res){
-    res.render("login");
-})
-app.get("/donate", function(req,res){
+});
+app.get("/login", function (req, res) {
+  res.render("login");
+});
+app.get("/donate", function (req, res) {
   res.render("donate");
-})
-app.get("/donation/money", function(req,res){
+});
+app.get("/donation/money", function (req, res) {
   res.render("donation/money");
-})
-app.get("/donation/books", function(req,res){
+});
+app.get("/donation/books", function (req, res) {
   res.render("donation/books");
-})
-app.get("/donation/volunteer", function(req,res){
+});
+app.get("/donation/volunteer", function (req, res) {
   res.render("donation/volunteer");
-})
-app.get("/news", function(req,res){
+});
+app.get("/news", function (req, res) {
   res.render("news");
-})
-app.get("/team" , function(req,res){
-   res.render("team");
-})
-app.get("/news", function(req,res){
+});
+app.get("/team", function (req, res) {
+  res.render("team");
+});
+app.get("/news", function (req, res) {
   res.render("news");
-})
-app.get("/dictionary",function(req,res){
+});
+app.get("/dictionary", function (req, res) {
   res.render("dictionary");
-})
-app.get("/about", function(req,res){
+});
+app.get("/about", function (req, res) {
   res.render("about_us");
-})
-app.post("/mailsub", function(req,res){
+});
+app.get("/quiz", function (req, res) {
+  res.render("quiz");
+});
+app.get("/blogs", function (req, res) {
+  res.render("blogs");
+});
+app.post("/mailsub", function (req, res) {
   const mailchimp = require("@mailchimp/mailchimp_marketing");
 
   mailchimp.setConfig({
@@ -70,7 +76,7 @@ app.post("/mailsub", function(req,res){
   const subscribingUser = {
     firstName: "",
     lastName: "",
-    email: _.toLower(req.body.email)
+    email: _.toLower(req.body.email),
   };
 
   async function run() {
@@ -80,23 +86,21 @@ app.post("/mailsub", function(req,res){
         status: "pending",
         merge_fields: {
           FNAME: subscribingUser.firstName,
-          LNAME: subscribingUser.lastName
-        }
+          LNAME: subscribingUser.lastName,
+        },
       });
 
       console.log(
-        `Successfully added contact as an audience member. The contact's id is ${
-          response.id
-        }.`
+        `Successfully added contact as an audience member. The contact's id is ${response.id}.`
       );
 
       // Redirect to confirmation page
-      res.redirect('/confirm-email');
+      res.redirect("/confirm-email");
     } catch (error) {
       console.error(error);
 
       // Redirect to not subscribed page
-      res.redirect('/not-subscribed');
+      res.redirect("/not-subscribed");
     }
   }
 
@@ -104,53 +108,64 @@ app.post("/mailsub", function(req,res){
 });
 
 // Confirm email route
-app.get('/confirm-email', (req, res) => {
+app.get("/confirm-email", (req, res) => {
   // Show confirmation message and link to click on
-  res.send('Please check your email and click on the confirmation link to confirm your subscription within one minute');
+  res.send(
+    "Please check your email and click on the confirmation link to confirm your subscription within one minute"
+  );
 });
 
 // Not subscribed page after unsuccessful confirmation
-app.get('/not-subscribed', (req, res) => {
-  res.send('Sorry, Invalid Email');
+app.get("/not-subscribed", (req, res) => {
+  res.send("Sorry, Invalid Email");
 });
 
 // Register a new user with email and password
-app.post('/register', async (req, res) => {
+app.post("/register", async (req, res) => {
   try {
     const email = req.body.email;
     const password = req.body.pass;
     const passConf = req.body.passConf;
 
-    const userCredential = await firebase.auth().createUserWithEmailAndPassword(email, passConf);
+    const userCredential = await firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, passConf);
     const user = userCredential.user;
 
     res.json({ success: true, data: { uid: user.uid } });
     res.redirect("home");
   } catch (error) {
-    res.status(400).json({ success: false, error: error.message, code: error.code });
+    res
+      .status(400)
+      .json({ success: false, error: error.message, code: error.code });
   }
 });
 
 // Login with email and password
-app.post('/login', async (req, res) => {
+app.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    const userCredential = await firebase.auth().signInWithEmailAndPassword(email, password).then((userCredential) => {
-      // Signed in 
-      const user = userCredential.user;
-      // ...
-    }); 
+    const userCredential = await firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        // ...
+      });
 
     res.json({ success: true, data: { uid: user.uid } });
-    res.send("<h2>Success</h2>")
+    res.send("<h2>Success</h2>");
   } catch (error) {
-    res.status(400).json({ success: false, error: error.message, code: error.code });
+    res
+      .status(400)
+      .json({ success: false, error: error.message, code: error.code });
   }
 });
 
 // Login with Google
-app.get('/google', async (req, res) => {
+app.get("/google", async (req, res) => {
   try {
     const provider = new firebase.auth.GoogleAuthProvider();
 
@@ -164,7 +179,7 @@ app.get('/google', async (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 8080
-app.listen(PORT, function() {
-    console.log("Server started on port "+PORT);
-  });
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, function () {
+  console.log("Server started on port " + PORT);
+});
