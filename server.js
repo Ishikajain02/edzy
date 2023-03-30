@@ -38,6 +38,12 @@ app.get("/donate", function(req,res){
 app.get("/donation/money", function(req,res){
   res.render("donation/money");
 })
+app.get("/donation/books", function(req,res){
+  res.render("donation/books");
+})
+app.get("/donation/volunteer", function(req,res){
+  res.render("donation/volunteer");
+})
 app.get("/news", function(req,res){
   res.render("news");
 })
