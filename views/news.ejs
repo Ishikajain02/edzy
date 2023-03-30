@@ -72,7 +72,7 @@ let currentPage  = 1;
 const fetchNews = async (page,q) => {
   console.log(`Fetching news for ${q}, Page number ${page}..`);
 
-  var url = 'https://newsapi.org/v2/everything?q=q&from=2023-02-24&pageSize=20page=pagesortBy=popularity&apiKey=a83f64288d5d4f74b9d5e2af70212f2e';
+  var url = 'https://newsapi.org/v2/everything?q=tesla&from=2023-02-28&sortBy=publishedAt&apiKey=e2b5e0213ac84da28c7fa5cf4b9b1667';
   var req = new Request(url);
    let a = await fetch(req)
    let response = await a.json() 
