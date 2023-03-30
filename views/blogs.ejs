@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="png" href="../images/books.png">
+	 <title>Blogs</title>
+  <!-- <link rel="stylesheet" href="blogs.css">-->
+
+    <title>Blog - Heaven for bloggers</title>
+</head>
+
+<body>
+    <!--Nav bar-->
+    <%- include('partials/header', { donateClass: 'active', homeClass: '', dictClass:'', teamClass:'', serviceClass:'', contactClass:'', quizClass:'', blogClass:''}); %>
+    <div class="max-width-1 m-auto">
+        <hr>
+    </div>
+    <div class="m-auto content max-width-1 my-2">
+        <div class="content-left">
+            <h1>The heaven for bloggers</h1>
+            <p> A website which lets you submit an article which upon approval will be up on our website and you
+                can get a good amount of reach from here!</p>
+            <p>My Halloween decorations are staying in the box this year. To be honest, they didn’t make it out of the
+                box last year either. My Halloween spirit has officially been bludgeoned to death by teenagers who no
+                longer care and a persistent October fear of the Northern California wildfires. And speaking of fear,
+                isn’t there more than enough of that going around? Maybe all of us can pretend that Halloween isn’t even
+                happening this year?</p>
+        </div>
+        <div class="content-right">
+            <img src="https://media.istockphoto.com/id/626669886/photo/blogging-blog-word-coder-coding-using-laptop.jpg?s=612x612&w=0&k=20&c=gX9o-kj9RohNBAT2n4wR6fldiTdvnpxZOsetFonpBJw=" alt="iBlog">
+        </div>
+    </div>
+
+    <div class="max-width-1 m-auto">
+        <hr>
+    </div>
+    <div class="home-articles max-width-1 m-auto font2">
+        <h2>Featured Articles</h2>
+        <div class="year-box adjust-year">
+            <div>
+                <h3>Year </h3>
+            </div>
+            <div>
+                <input type="radio" name="year" id=""> 2020
+            </div>
+            <div>
+                <input type="radio" name="year" id=""> 2021
+            </div>
+        </div>
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="https://usa.bootcampcdn.com/wp-content/uploads/sites/108/2021/12/tes_gen_blog_post_071921_1233182206-1-800x412.jpg" alt="article">
+            </div>
+            <div class="home-article-content font1">
+                <a href="https://www.thinkful.com/blog/how-to-become-a-software-developer-2/">
+                    <h3>How To Become A Software Developer</h3>
+                </a>
+
+                <div>Author Name</div>
+                <span>07 January | 6 min read</span>
+            </div>
+        </div>
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="https://www.edtechreview.in/images/higher-education-blogs.png" alt="article">
+            </div>
+            <div class="home-article-content font1">
+                <a href="https://www.edtechreview.in/trends-insights/insights/20-higher-education-blogs-you-must-follow-in-2022/">
+                    <h3>Higher Education</h3>
+                </a>
+
+                <div>Author Name</div>
+                <span>07 January | 6 min read</span>
+            </div>
+        </div>
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210414193916/7-Tips-to-Improve-JavaScript-Performance.png" alt="article">
+            </div>
+            <div class="home-article-content font1">
+                <a href="https://www.toptal.com/javascript/asynchronous-javascript-programming">
+                    <h3>The Secret Behind Steady App Performance: Asynchronous JavaScript</h3>
+                </a>
+
+                <div>Author Name</div>
+                <span>07 January | 6 min read</span>
+            </div>
+        </div>
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="https://assets.toptal.io/images?url=https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/1181581/retina_500x200_cover-secure-rest-api-in-nodejs-18f43b3033c239da5d2525cfd9fdc98f.png" alt="article">
+            </div>
+            <div class="home-article-content font1">
+                <a href="https://www.toptal.com/nodejs/secure-rest-api-in-nodejs">
+                    <h3>Creating a Secure REST API in Node.js</h3>
+                </a>
+
+                <div>Author Name</div>
+                <span>07 January | 6 min read</span>
+            </div>
+        </div>
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="https://miro.medium.com/v2/resize:fit:1200/1*Cc8wPgY3iVvj-cunecFyjg.png" alt="article">
+            </div>
+            <div class="home-article-content font1">
+                <a href="https://www.toptal.com/react/solidjs-vs-react">
+                    <h3>SolidJS vs. React: The Go-to Guide</h3>
+                </a>
+
+                <div>Author Name</div>
+                <span>07 January | 6 min read</span>
+            </div>
+        </div>
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="https://i0.wp.com/thecleverprogrammer.com/wp-content/uploads/2021/02/Machine-Learning-Projects-on-Social-Media-Analysis.png?fit=1280%2C720&ssl=1" alt="article">
+            </div>
+            <div class="home-article-content font1">
+                <a href="https://www.toptal.com/python/python-social-media-analysis">
+                    <h3>Strategic Listening: A Guide to Python Social Media Analysis</h3>
+                </a>
+
+                <div>Author Name</div>
+                <span>07 January | 6 min read</span>
+            </div>
+        </div>
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript/jshint-linter.png" alt="article">
+            </div>
+            <div class="home-article-content font1">
+                <a href="https://www.toptal.com/javascript/10-most-common-javascript-mistakes">
+                    <h3>The 10 Most Common JavaScript Issues Developers Face</h3>
+                </a>
+
+                <div>Author Name</div>
+                <span>07 January | 6 min read</span>
+            </div>
+        </div>
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="https://docs.unity3d.com/Packages/com.unity.visualscripting@1.7/manual/images/vs-relations-debugging-show-relations.png" alt="article">
+            </div>
+            <div class="home-article-content font1">
+                <a href="https://www.toptal.com/unity-unity3d/unity-ai-development-an-xnode-based-graphical-fsm-tutorial">
+                    <h3>Unity AI Development: An xNode-based Graphical FSM Tutorial</h3>
+                </a>
+
+                <div>Author Name</div>
+                <span>07 January | 6 min read</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>Copyright &copy; edzyco.com </p>
+        <a href="https://www.vecteezy.com/free-vector/typewriter">Vector Credits: Vecteezy</a>
+    </div>
+</body>
+
+</html>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&display=swap");
+:root { 
+  --main-bg-color: #4ba2d4;
+  --font1: "Baloo Bhaina 2", cursive;
+  --font2: "Roboto", sans-serif;
+}
+
+.center{
+  text-align: center
+}
+
+.font1 {
+  font-family: var(--font1);
+}
+.font2 {
+  font-family: var(--font2);
+}
+
+.max-width-1 {
+  max-width: 80vw;
+}
+
+.max-width-2 {
+  max-width: 60vw;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.mx-1{
+  margin-left: 23px;
+  margin-right: 23px;
+}
+
+.my-2{
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.btn {
+  padding: 0px 20px;
+  padding-top: 3px;
+  border: 2px solid black;
+  border-radius: 6px;
+  font-family: var(--font1);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  color: white;
+  background: var(--main-bg-color);
+}
+
+.form-input {
+  padding: 0px 5px;
+  padding-top: 3px;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 4px;
+  margin: 0 13px;
+  font-family: var(--font1);
+}
+
+.form-box input, textarea{
+  width: 52vw;
+  padding: 0px 6px;
+  margin: 7px 0;
+  font-size: 18px;
+  font-family: var(--font1);
+  border: 2px solid var(--main-bg-color);
+    border-radius: 5px;
+}
+* {
+    margin: 0;
+    padding: 0; 
+  }
+  
+  
+  
+  .content {
+    height: 100%;
+    display: flex;
+    margin-top: 32px;
+    padding: 9px;
+    position: relative;
+  }
+  
+  .content::after {
+    content: "";
+    background-image: url("../img/11.svg");
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    opacity: 0.15;
+    border-radius: 12px;
+  }
+  
+  .content-left {
+    font-family: var(--font1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 49px;
+    z-index: 1;
+  }
+  
+  .content-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content-right img {
+    height: 355px;
+    border: 2px solid black;
+    border-radius: 200px;
+  }
+  
+  .home-articles {
+    padding: 18px;
+    background-color: rgb(248, 239, 239, 0.5);
+    margin-top: 23px;
+    position: relative;
+  }
+  
+  .year-box {
+    position: absolute;  
+    right: 0px;
+    top: 100px;
+    width: 234px;
+    height: 255px;
+    font-size: 18px;
+  }
+  
+  .year-box div {
+    margin: 12px 0px;
+  }
+  
+  .home-article {
+    display: flex;
+    margin: 25px;
+  }
+  
+  .home-article img {
+    width: 300px;
+  }
+  
+  .home-article-content {
+    align-self: center;
+    padding: 25px;
+  }
+  
+  .home-article-content a {
+    text-decoration: none;
+    color: black;
+  }
+  /* .home-articles{} */
+  .footer {
+    height: 50px;
+    background-color: var(--main-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+  }
+  
+  .footer a {
+    color: white;
+  }
+  @media screen and (max-width: 1200px) {
+    .navigation {
+      flex-direction: column;
+      margin-bottom: 23px;
+    }
+  
+    .nav-left {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .content-right {
+      display: none;
+    }
+  
+    .home-article {
+      flex-direction: column;
+    }
+  
+    .home-article-img {
+      text-align: center;
+    }
+  
+    .year-box {
+      top: 25px;
+      left: 60vw;
+      font-size: 11px;
+      display: flex;
+    }
+  
+    .year-box div {
+      padding: 0 3px;
+      margin: 0;
+    }
+  
+    .home-article img {
+      width: 70vw;
+    }
+    .form-input {
+      width: 50%;
+    }
+    .form-box input,
+    textarea {
+      width: 66vw;
+    }
+    .row {
+      flex-direction: column;
+    }
+    .social {
+      padding: 0;
+    }
+    .post-img {
+      height: auto;
+    }
+    .adjust-year {
+      position: static;
+      height: auto;
+      padding: 12px 0px;
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+  }
+  
+</style>

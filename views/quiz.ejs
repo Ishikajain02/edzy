@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="png" href="../images/icon/favicon.png">
+	<title>Quiz</title>
+	<!--<link rel="stylesheet" type="text/css" href="quiz.css">
+	<script type="text/javascript" src="../script.js"></script>-->
+</head>
+<body>
+	
+<!-- NAVIGATION -->
+<%- include('partials/header', { donateClass: 'active', homeClass: '', dictClass:'', teamClass:'', serviceClass:'', contactClass:'', quizClass:'', blogClass:''}); %>
+
+
+	
+
+<!-- MAIN Heading of Page -->
+	<div class="title" id="title">
+		<span>Daily Quiz on Edzy</span>
+		<div class="shortdesc"><br>
+			<p>If you think education is expensive, try ignorance</p>
+		</div>
+		<button onclick="startquiz()">Start Now</button>
+	</div>
+
+
+<div class="panel" id="panel">
+	
+	<div class="left-side" id="left">
+		<ul>
+			<li onclick="quizt(1)">HOME</li>
+			<li onclick="quizt(2)">JEE Mains</li>
+			<li onclick="quizt(3)">JEE Advanced</li>
+			<li onclick="quizt(4)">GATE</li>
+			<li onclick="quizt(5)">C/C++</li>
+			<li onclick="quizt(6)">Java</li>
+			<li onclick="quizt(7)">Python</li>
+			<li onclick="quizt(8)">JavaScript</li>
+			<li onclick="quizt(9)">Data Structures</li>
+			<li onclick="quizt(10)">Algorithm</li>
+			<li onclick="quizt(11)">Interview Questions</li>
+		</ul>
+	</div>
+
+	<div class="right-side" id="right">
+		<div id="quiz-container">
+			
+			<div id="f1"><div class="quiz-frame main-frame"></div></div>
+
+			<div id="f2"><iframe class="quiz-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSdgEKbg8pQP4Q1gYERFYPf3gCD52f_6vx3OobONouI7d9UMJw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
+			
+			<div id="f3"><iframe class="quiz-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSfsb1xxSELYk44yV2VhmT4gUR4syrU-LDUROWS2Tx8vijLdAw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
+			
+			<div id="f4"><iframe class="quiz-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSeI6Z91SO0U76CYLaGZb2tASrCK7w-6F74-0RzM5ln2gtWF0A/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
+
+			<div id="f5"><iframe class="quiz-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSerkzoABUeQII0k2-ndOP1nbWWU4HPcnEZKBK0IFcqknpwF8A/viewform?embedded=true"  frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></iframe></div>
+			
+			<div id="f6"><iframe class="quiz-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSfgS01fM_z50BiZ8f-u4Tr8PAYBe_RLMtCkj4naVdNSNKQdsg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
+			
+			<div id="f7"><iframe class="quiz-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSe0rw6IbJdjSDos4_sDFhXCiyjW1mL1fD3dwargpP39WQ6QlA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
+
+			<div id="f8"><iframe class="quiz-frame" src="https://docs.google.com/forms/d/e/1FAIpQLScAI538JLFBxKTQ461uv_N9gwX-8iLf9o-hWFSeh84iPVuD7Q/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
+
+			<div id="f9"><iframe class="quiz-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSePrfIDyVg9Rx22TixbqDh5_h21OcmBcfb9YrSUiYSTt9ynEw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
+			
+			<div id="f10"><iframe class="quiz-frame" src="https://docs.google.com/forms/d/e/1FAIpQLScTIuU7VxrADkSJ2C8DdOXCRMlLiSOrMsSrhPDQhz-27smVYw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
+
+			<div id="f11"><iframe class="quiz-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSe_aS8-CMNFdUzI1UE73zahC2bmMwJkmB6FJXPIeKbLIBqB4Q/viewform?embedded=true" frameborder="0" marginheiclass="quiz-frame" ght="0" marginwidth="0">Loading…</iframe></div>
+
+		</div>
+	</div>
+
+</div>
+    <script>
+		function quizt(frame) {
+  document.getElementById('f1').style='display: none;';
+  document.getElementById('f2').style='display: none;';
+  document.getElementById('f3').style='display: none;';
+  document.getElementById('f4').style='display: none;';
+  document.getElementById('f5').style='display: none;';
+  document.getElementById('f6').style='display: none;';
+  document.getElementById('f7').style='display: none;';
+  document.getElementById('f8').style='display: none;';
+  document.getElementById('f9').style='display: none;';
+  document.getElementById('f10').style='display: none;';
+  document.getElementById('f11').style='display: none;';
+  if(frame == 1) document.getElementById('f1').style = 'display: block';
+  else if(frame == 2) document.getElementById('f2').style = 'display: block';
+  else if(frame == 3) document.getElementById('f3').style = 'display: block';
+  else if(frame == 4) document.getElementById('f4').style = 'display: block';
+  else if(frame == 5) document.getElementById('f5').style = 'display: block';
+  else if(frame == 6) document.getElementById('f6').style = 'display: block';
+  else if(frame == 7) document.getElementById('f7').style = 'display: block';
+  else if(frame == 8) document.getElementById('f8').style = 'display: block';
+  else if(frame == 9) document.getElementById('f9').style = 'display: block';
+  else if(frame == 10) document.getElementById('f10').style = 'display: block';
+  else if(frame == 11) document.getElementById('f11').style = 'display: block'; 
+  else alert('error');
+}
+
+function startquiz() {
+  document.getElementById('title').style = 'display: none;'; 
+
+  document.getElementById('panel').style = 'display: inline-flex;'; 
+  document.getElementById('left').style = 'display: block;'; 
+  document.getElementById('right').style = 'display: block;'; 
+}
+function searchdisplay() {
+  document.getElementById('searchpanel').style.display="block";
+}
+
+function display(n) {
+  var img1 = document.getElementById('img1');
+  var img2 = document.getElementById('img2');
+  var img3 = document.getElementById('img3');
+  var img4 = document.getElementById('img4');
+  var s1 = document.getElementById('s1');
+  var s2 = document.getElementById('s2');
+  var s3 = document.getElementById('s3');
+  var s4 = document.getElementById('s4');
+
+  img1.style = 'display: none;';
+  img2.style = 'display: none;';
+  img3.style = 'display: none;';
+  img4.style = 'display: none;';
+  s1.style = 'background: #DF2771; color: #FFF;';
+  s2.style = 'background: #DF2771; color: #FFF;';
+  s3.style = 'background: #DF2771; color: #FFF;';
+  s4.style = 'background: #DF2771; color: #FFF;';
+
+  if(n==1) {
+    img1.style = 'display: block;';
+    s1.style = 'background: #E5E8EF; color: #DF2771;';
+  }
+  if(n==2) {
+    img2.style = 'display: block;';
+    s2.style = 'background: #E5E8EF; color: #DF2771;';
+  }
+  if(n==3) {
+    img3.style = 'display: block;';
+    s3.style = 'background: #E5E8EF; color: #DF2771;';
+  }
+  if(n==4) {
+    img4.style = 'display: block;';
+    s4.style = 'background: #E5E8EF; color: #DF2771;';
+  } 
+}
+
+
+function sideMenu(side) {
+  var menu = document.getElementById('side-menu');
+  if(side==0) {
+    menu.style = 'transform: translateX(0vh); position:fixed;';
+  }
+  else {
+    menu.style = 'transform: translateX(-100%);';
+  }
+  side++;
+}
+	</script>
+	<script type="text/javascript" src="../script.js"></script>
+</body>
+</html>
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background: url(https://img.freepik.com/free-vector/orange-question-mark-background-with-text-space_1017-27394.jpg?size=626&ext=jpg&uid=R94513397&ga=GA1.2.1852871347.1678134029&semt=ais);
+	background-size: cover;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/*Styling SCROLLBAR*/
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #041647;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64c6e4; 
+}
+
+
+
+/*TITLE*/
+.title {
+	margin-top: 18%;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+.title span{
+	font-weight: 700;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 60px;
+	/*color: #2E3D49;*/
+	color: #070606;
+}
+.title .shortdesc {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	color: #0a0808;
+	margin-bottom: 50px;
+	text-align: center;
+	/*display: none;*/
+}
+
+.title button {
+	padding: 20px 2%;
+	border: none;
+	border-radius: 5px;
+	color: #faf8f8;
+	background: #060225;
+	outline: none;
+	cursor: pointer;
+	box-shadow: 0 0 50px rgba(0,0,0,0.5);
+}
+.title button:hover {
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/*PANEL*/
+.panel {
+	display: none;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+}
+/*Different Topics Container*/
+.left-side {
+	background: #FFF;
+	height: 100%;
+	width: 25%;
+	display: flex;
+	justify-content: center;
+	box-shadow: inset 0 0 20px rgba(0,0,0,0.7),
+					0 0 30px rgba(0,0,0,0.5);
+}
+
+/*Google Form Container*/
+.right-side {
+	background: #fff;
+	height: 100%;
+	width: 75%;
+}
+.left-side ul {
+	margin: 50px;
+	margin-top: 150px;
+}
+.left-side li {
+	list-style-type: none;
+	cursor: pointer;
+	color: #010725;
+	font-weight: 700;
+	font-size: 1.2em;
+	margin-bottom: 20px;
+}
+.left-side li:hover {
+	color: #000;
+	font-size: 1.5em;
+	font-weight: 900;
+	transition: .3s ease-in-out;
+}
+
+#quiz-container {
+	margin-top: 80px;
+	width: 100%;
+	height: 100%;
+}
+
+.quiz-frame {
+	width: 100%;
+	height: 95vh;
+	border: none;
+}
+.main-frame {
+	background: url(https://img.freepik.com/free-vector/question-answers-background-with-search-symbol_1017-27388.jpg?size=626&ext=jpg&uid=R94513397&ga=GA1.2.1852871347.1678134029&semt=ais);
+	background-size: cover;
+	background-position: center;
+}
+.main-frame p {
+	font-size: 5em;
+	font-weight: 900;
+	color: #2E3D49;
+}
+
+
+/*For Responsive Website*/
+@media screen and (max-width: 1366px) {
+	.search {
+		display: none;
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.nav ul, .nav .search {
+		display: none;
+	}
+	.nav #learned-logo {
+		transition: 1s ease;
+		margin-left: 40%;
+		transform: scale(1.5);
+	}
+	.nav ul li{
+		width: 100%;
+		margin-bottom: 5px;
+	}
+	.nav .switch-tab {
+		visibility: visible;
+	}
+	.nav .check-box {
+		visibility: visible;
+	}
+	.search {
+		visibility: visible;
+		margin: 30px;
+		margin-top: 0px;
+	}
+}
+
+</style>
