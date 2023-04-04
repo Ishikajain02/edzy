@@ -69,7 +69,7 @@ app.post("/mailsub", function (req, res) {
   const mailchimp = require("@mailchimp/mailchimp_marketing");
 
   mailchimp.setConfig({
-    apiKey: "916c023105f4162c20b30b10aef96409-us17",
+    apiKey: "5f7d2ce279a2c7531fffc12021a731b1-us17",
     server: "us17",
   });
   const listId = "b5b8594cea";
@@ -93,32 +93,19 @@ app.post("/mailsub", function (req, res) {
       console.log(
         `Successfully added contact as an audience member. The contact's id is ${response.id}.`
       );
-
-      // Redirect to confirmation page
-      res.redirect("/confirm-email");
+      
+      res.send("<script>alert('Confirm Your E-mail');window.location.href = '/';</script>");
     } catch (error) {
       console.error(error);
 
       // Redirect to not subscribed page
-      res.redirect("/not-subscribed");
+      res.send("<script>alert('Sorry! Invalid E-mail');window.location.href = '/';</script>");
     }
   }
 
   run();
 });
 
-// Confirm email route
-app.get("/confirm-email", (req, res) => {
-  // Show confirmation message and link to click on
-  res.send(
-    "Please check your email and click on the confirmation link to confirm your subscription within one minute"
-  );
-});
-
-// Not subscribed page after unsuccessful confirmation
-app.get("/not-subscribed", (req, res) => {
-  res.send("Sorry, Invalid Email");
-});
 
 // Register a new user with email and password
 app.post("/register", async (req, res) => {
